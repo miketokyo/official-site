@@ -20,13 +20,16 @@ $('body').scrollspy({
     target: '.navbar-fixed-top'
 })
 
-$(window).on('scroll', function(){
-  if($('nav').hasClass('navbar-shrink')){
-    $('#header-log').show();
-  }else{
-    $('#header-log').hide();
-  }
-});
+
+if(!navigator.userAgent.match(/iPad|iPhone|Android/)){
+  $(window).on('scroll', function(){
+    if($('nav').hasClass('navbar-shrink')){
+      $('#header-log').show();
+    }else{
+      $('#header-log').hide();
+    }
+  });
+}
 
 // Closes the Responsive Menu on Menu Item Click
 $('.navbar-collapse ul li a').click(function() {
