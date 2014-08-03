@@ -10,7 +10,6 @@ body {
     background-color: #222;
     color:#fff;
 }
-
 .text-muted {
     color: #777;
 }
@@ -173,12 +172,12 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-default {
     border-color: transparent;
-    background-color: #222;
+    background-color: rgb(68, 15, 101);
 }
 
 .navbar-default .navbar-brand {
-    font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
-    color: #fed136;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #fff;
 }
 
 .navbar-default .navbar-brand:hover,
@@ -859,13 +858,18 @@ img::-moz-selection {
     background: 0 0;
 }
 
-body {
-    webkit-tap-highlight-color: #fed136;
-}
-
 section#team {
   background-color: #333;
 }
-section#contact{
+
+section#contact {
   background-color: #333;
+}
+
+.yellow {
+  color:#ffff00;
+}
+
+.white {
+  color:#fff;
 }

@@ -23,12 +23,12 @@ $('body').scrollspy({
 
 if(!navigator.userAgent.match(/iPad|iPhone|Android/)){
   $(window).on('scroll', function(){
-    if($('nav').hasClass('navbar-shrink')){
-      $('#header-log').show();
-    }else{
-      $('#header-log').hide();
-    }
+    if($('nav').hasClass('navbar-shrink'))
+      return $('#header-log').show();
+    $('#header-log').hide();
   });
+}else{
+  $('.navbar-brand').html('<span class="white">Mike</span><span class="yellow">TOKYO</span>');
 }
 
 // Closes the Responsive Menu on Menu Item Click
