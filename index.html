@@ -19,7 +19,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/agency.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -37,6 +37,17 @@
 
 <body id="page-top" class="index">
 
+    <div id="fb-root"></div>
+    <script>
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&appId=196115547248044&version=v2.0";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
@@ -49,7 +60,8 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand page-scroll" href="#page-top">
-                  <img id="header-log" src="./img/logo_s.png" style="width:60px; margin-top:-20px; display:none;">
+                  <p id="header-title" ><span class="white">Mike</span><span class="yellow">TOKYO</span></p>
+                  <img id="header-logo" src="./img/logo_s.png">
                 </a>
             </div>
 
@@ -66,13 +78,13 @@
                         <a class="page-scroll" href="#team">Staff</a>
                     </li>
                     <li>
+                        <a class="page-scroll" href="#portfolio">Activity</a>
+                    </li>
+                    <li>
                         <a class="page-scroll" href="#about">About</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="http://blog.miketokyo.com" target="_blank">Blog</a>
                     </li>
                 </ul>
             </div>
@@ -105,26 +117,15 @@
             </div>
             <div class="row text-center">
                 <div class="col-md-4">
-                    <iframe src="http://www.ustream.tv/embed/12330370" height="400" scrolling="no" frameborder="0"></iframe>
+                    <iframe class="sns-embed" src="http://www.ustream.tv/embed/12330370" height="400" scrolling="no" frameborder="0"></iframe>
                     <p class="text-muted">We've broadcasted on ustream. Please subscribe our radio <a href="http://www.ustream.tv/channel/mike-tokyo">here</a>.</p>
                 </div>
                 <div class="col-md-4">
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&appId=196115547248044&version=v2.0";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-<div class="fb-like-box" data-href="https://www.facebook.com/taketomic" data-height="400" data-colorscheme="dark" data-show-faces="false" data-header="false" data-stream="true" data-show-border="false"></div>
-                    <p class="text-muted">We've anounced current news on facebook. Don't miss it!</p>
+                    <div class="fb-like-box sns-embed" data-href="https://www.facebook.com/taketomic" data-height="400" data-colorscheme="dark" data-show-faces="false" data-header="false" data-stream="true" data-show-border="false"></div>
                 </div>
                 <div class="col-md-4">
-
-<a class="twitter-timeline" href="https://twitter.com/_miketokyo" data-widget-id="259605092020396032" height="400">Tweets by @_miketokyo</a>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-                    <p class="text-muted">We've used twitter to communicate with our audience in radio program.</p>
+                  <a class="twitter-timeline sns-embed" href="https://twitter.com/_miketokyo" data-widget-id="259605092020396032" height="400">Tweets by @_miketokyo</a>
+                  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
                 </div>
             </div>
 
@@ -178,6 +179,50 @@
             </div>
         </div>
     </section>
+
+    <!-- Portfolio Grid Section -->
+    <section id="portfolio" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Activity</h2>
+                    <h3 class="section-subheading text-muted">Our activities.</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="http://blog.miketokyo.com" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/blog.png" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>MikeTOKYO Developers</h4>
+                        <p class="text-muted">Blogs</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/applelogo.png" class="img-responsive" alt="" style="width:200px; height:204px; margin: 0 auto;">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>PodCast</h4>
+                        <p class="text-muted">PodCast</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- About Section -->
     <section id="about">
@@ -360,7 +405,7 @@
     <script src="js/contact_me.js"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script src="js/agency.js"></script>
+    <script src="js/main.js"></script>
 
 </body>
 

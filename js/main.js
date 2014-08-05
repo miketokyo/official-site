@@ -4,6 +4,10 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+function isMobileBrowser(){
+  return navigator.userAgent.match(/iPad|iPhone|Android/) != null;
+}
+
 // jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
     $('a.page-scroll').bind('click', function(event) {
@@ -18,17 +22,18 @@ $(function() {
 // Highlight the top nav as scrolling occurs
 $('body').scrollspy({
     target: '.navbar-fixed-top'
-})
+});
 
+if(!isMobileBrowser()){
 
-if(!navigator.userAgent.match(/iPad|iPhone|Android/)){
+  $('#header-title').hide();
+
   $(window).on('scroll', function(){
     if($('nav').hasClass('navbar-shrink'))
-      return $('#header-log').show();
-    $('#header-log').hide();
+      return $('#header-logo').show();
+    $('#header-logo').hide();
   });
-}else{
-  $('.navbar-brand').html('<span class="white">Mike</span><span class="yellow">TOKYO</span>');
+
 }
 
 // Closes the Responsive Menu on Menu Item Click

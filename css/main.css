@@ -862,6 +862,14 @@ section#team {
   background-color: #333;
 }
 
+section#portfolio {
+  background-color: #222;
+}
+
+section#about {
+  background-color: #333;
+}
+
 section#contact {
   background-color: rgb(68, 15, 101);
 }
@@ -872,4 +880,10 @@ section#contact {
 
 .white {
   color:#fff;
+}
+
+#header-logo {
+  width:60px;
+  margin-top:-20px;
+  display: none;
 }
